@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rowanmorkner.github.io/portfolio2/sitemap.xml
