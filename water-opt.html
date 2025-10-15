@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Water-Opt Dashboard - Portfolio Project</title>
+    <link rel="stylesheet" href="navbar.css">
     <style>
       * {
         margin: 0;
@@ -181,6 +182,23 @@
     </style>
   </head>
   <body>
+    <!-- Site-wide Navigation -->
+    <nav class="site-navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">Rowan Morkner</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="personal/Rowan%20Morkner%20-%20Resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
       <!-- Header -->
       <div class="header">
@@ -257,11 +275,14 @@
               This may take a few seconds
             </p>
           </div>
-          <!-- REPLACE 'your-app-name' WITH YOUR ACTUAL STREAMLIT APP URL -->
+          <!-- Streamlit Embed with proper parameters -->
           <iframe
-            src="https://rice-forecast.streamlit.app/"
+            src="https://rice-forecast.streamlit.app/?embed=true"
             loading="lazy"
             title="Water-Opt Dashboard"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"
           >
           </iframe>
         </div>
@@ -309,6 +330,7 @@
       </footer>
     </div>
 
+    <script src="navbar.js"></script>
     <script>
       // Hide loading message once iframe loads
       const iframe = document.querySelector("iframe");

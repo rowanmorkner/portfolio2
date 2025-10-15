@@ -92,8 +92,26 @@
   </script>
   
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
+  <!-- Site-wide Navigation -->
+  <nav class="site-navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">Rowan Morkner</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="personal/Rowan%20Morkner%20-%20Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="header" role="banner">
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__brand">
@@ -205,7 +223,7 @@
               </div>
             </div>
             <div class="paper-card__actions">
-              <a href="embed-example.html" class="btn btn--outline">View Project</a>
+              <a href="water-opt.html" class="btn btn--outline">View Project</a>
             </div>
           </article>
 
@@ -307,6 +325,7 @@
     </div>
   </footer>
 
+  <script src="navbar.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
