@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navbarMenu = document.querySelector('.navbar-menu');
+  const navbar = document.querySelector('.site-navbar');
 
   if (hamburger && navbarMenu) {
     hamburger.addEventListener('click', function() {
@@ -40,5 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
         (currentPage === 'index.html' && href === 'index.html')) {
       link.classList.add('active');
     }
+  });
+
+  // Hide/show navbar on scroll
+  let lastScrollTop = 0;
+  const scrollThreshold = 5;
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+      return;
+    }
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling down
+      navbar.classList.add('navbar-hidden');
+    } else {
+      // Scrolling up
+      navbar.classList.remove('navbar-hidden');
+    }
+
+    lastScrollTop = scrollTop;
   });
 });
